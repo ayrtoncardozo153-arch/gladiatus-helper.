@@ -1,0 +1,10 @@
+GLADIATUS HELPER - APP WEB PROGRESIVA (PWA)
+
+Esta es una aplicación web funcional con notas, temporizador, checklist, registro de personaje y calculadora de materiales configurable. Guarda los datos localmente en el navegador.
+
+IMPORTANTE PARA INSTALAR COMO APP:
+Para que aparezca 'Añadir a pantalla de inicio' como PWA completa, estos archivos deben publicarse en un sitio HTTPS. Abrir index.html localmente permite probarla, pero no garantiza instalación PWA ni modo sin conexión.
+
+No consulta automáticamente el servidor de Gladiatus ni incorpora tablas oficiales de prefijos/sufijos; evita inventar datos del juego.
+
+Para publicarla gratis se puede usar GitHub Pages: crear un repositorio, subir el contenido de esta carpeta y activar Pages desde Settings > Pages. Luego abrir la URL HTTPS en el navegador Android y elegir 'Añadir a pantalla de inicio' o 'Instalar aplicación'.

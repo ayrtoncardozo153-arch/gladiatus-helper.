@@ -1,0 +1,16 @@
+{
+  "name": "Gladiatus Helper",
+  "short_name": "Gladiatus Helper",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#101319",
+  "theme_color": "#171a20",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

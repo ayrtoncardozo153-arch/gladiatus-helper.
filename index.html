@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#171a20"><meta name="description" content="Asistente personal para Gladiatus">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg" type="image/svg+xml">
+<title>Gladiatus Helper</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="brand">⚔️ <span>GLADIATUS</span> HELPER</div><small>Asistente personal · versión móvil</small></header>
+<nav id="tabs">
+<button class="tab active" data-page="inicio">Inicio</button><button class="tab" data-page="forja">Forja</button><button class="tab" data-page="personaje">Personaje</button><button class="tab" data-page="tareas">Tareas</button>
+</nav>
+<main>
+<section class="page active" id="inicio">
+ <div class="hero"><div class="eyebrow">TU CENTRO DE CONTROL</div><h1>Prepará tu próxima batalla.</h1><p>Notas, cálculos y seguimiento para tu aventura.</p></div>
+ <div class="cards">
+  <button class="tile" data-go="forja"><b>⚒️ Forja</b><span>Calculá cantidades y materiales</span></button>
+  <button class="tile" data-go="personaje"><b>🛡️ Personaje</b><span>Guardá equipo y mercenarios</span></button>
+  <button class="tile" data-go="tareas"><b>📜 Tareas</b><span>Checklist de juego</span></button>
+ </div>
+ <div class="panel"><h2>Notas rápidas</h2><textarea id="quickNotes" placeholder="Anotá objetivos, recursos o recordatorios..."></textarea><button class="primary" id="saveNotes">Guardar notas</button><p class="muted" id="saveMsg">Se guardan en este dispositivo.</p></div>
+ <div class="panel"><h2>Temporizador</h2><div class="timerrow"><input id="minutes" type="number" min="1" max="1440" value="60"><button class="primary" id="startTimer">Iniciar</button><button class="secondary" id="stopTimer">Detener</button></div><div id="timer" class="timer">60:00</div></div>
+</section>
+<section class="page" id="forja">
+ <div class="pagehead"><div class="eyebrow">HERRAMIENTAS</div><h1>Calculadora de forja</h1><p>Estimá materiales según la cantidad que vos ingreses.</p></div>
+ <div class="panel">
+  <label>Material / recurso<input id="material" placeholder="Ej.: madera, hierro, cuero"></label>
+  <label>Cantidad por objeto<input id="perItem" type="number" min="0" step="any" value="1"></label>
+  <label>Cantidad de objetos<input id="itemCount" type="number" min="1" value="1"></label>
+  <div class="result"><span>Total necesario</span><strong id="forgeTotal">1</strong></div>
+  <button class="primary" id="addMaterial">Agregar a mi lista</button>
+ </div>
+ <div class="panel"><h2>Mi lista de materiales</h2><ul id="materials" class="clean"><li class="muted">Todavía no agregaste materiales.</li></ul><button class="secondary" id="clearMaterials">Vaciar lista</button></div>
+ <p class="note">Esta versión no consulta automáticamente los datos del servidor ni conoce los requisitos oficiales de cada objeto. Ingresá los valores del juego para calcularlos.</p>
+</section>
+<section class="page" id="personaje">
+ <div class="pagehead"><div class="eyebrow">REGISTRO</div><h1>Mi personaje</h1><p>Guardá tus datos para tenerlos a mano.</p></div>
+ <div class="panel">
+  <label>Nombre del personaje<input id="charName" placeholder="Nombre"></label>
+  <label>Servidor<input id="server" placeholder="Ej.: España"></label>
+  <label>Nivel<input id="level" type="number" min="1" placeholder="Nivel"></label>
+  <label>Equipo / prefijos / sufijos<textarea id="gear" placeholder="Anotá aquí tus objetos y atributos..."></textarea></label>
+  <label>Mercenarios<textarea id="mercs" placeholder="Anotá equipo, estadísticas y mejoras..."></textarea></label>
+  <button class="primary" id="saveCharacter">Guardar personaje</button><p class="muted" id="charMsg"></p>
+ </div>
+</section>
+<section class="page" id="tareas">
+ <div class="pagehead"><div class="eyebrow">SEGUIMIENTO</div><h1>Checklist de juego</h1><p>Marcá las actividades que ya completaste.</p></div>
+ <div class="panel"><div id="taskList"></div><button class="secondary" id="resetTasks">Reiniciar checklist</button></div>
+ <div class="panel"><h2>Objetivo del día</h2><textarea id="goal" placeholder="¿Qué querés conseguir hoy?"></textarea><button class="primary" id="saveGoal">Guardar objetivo</button></div>
+</section>
+</main>
+<footer>Gladiatus Helper · Herramienta independiente no oficial</footer>
+<script src="app.js"></script>
+</body></html>
